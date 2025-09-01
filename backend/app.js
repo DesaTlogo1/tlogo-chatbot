@@ -413,8 +413,8 @@ async function sendInteractiveLayananButton(to, layananList) {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                sender: "6285191330330",
-                api_key: "nMLUrJsihSYRO93y2LC2DammLFvph8",
+                api_key: process.env.WAGW_API_KEY,
+                sender: process.env.WA_NUMBER,
                 number: to,
                 message,
                 footer: "Pilih layanan",
@@ -459,8 +459,8 @@ async function sendAdminContactButton(to, customMessage = null) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-            sender: "6285191330330",
-            api_key: "nMLUrJsihSYRO93y2LC2DammLFvph8",
+            api_key: process.env.WAGW_API_KEY,
+            sender: process.env.WA_NUMBER,
             number: to,
             message,
             footer: "Pilih salah satu aksi",
